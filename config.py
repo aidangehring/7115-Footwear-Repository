@@ -15,7 +15,7 @@ SHOES= {
     },
     'Pegasus': {
         'name': 'Nike Pegasus',
-        'color': "#1100FF",  
+        'color': "#198D9C",  
         'description': 'Max cushion running shoe, high drop'
     }
 }
@@ -23,7 +23,8 @@ SHOES= {
 VARIABLE_LABELS = {
     'angles': 'Joint Angle (°)',
     'moments': 'Joint Moment (Nm/kg)',
-    'powers': 'Joint Power (W/kg)'
+    'powers': 'Joint Power (W/kg)',
+    'grf': 'Ground Reaction Force (%BW)'
 }
  
 JOINT_OPTIONS = [
@@ -37,5 +38,6 @@ AXIS_OPTIONS = ['X', 'Y', 'Z']
 VARIABLE_OPTIONS = {
     'angles':  'Angles',
     'moments': 'Moments',
-    'powers':  'Powers'
+    'powers':  'Powers',
+    'grf': 'GRF'
 }

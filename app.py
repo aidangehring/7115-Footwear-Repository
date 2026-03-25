@@ -132,16 +132,20 @@ st.markdown('<hr class="divider">', unsafe_allow_html=True)
 
 # ── Controls ──────────────────────────────────────────────────────────────────
 st.markdown('<p class="section-label">Analysis Controls</p>', unsafe_allow_html=True)
+variable_key = st.radio("Variable", list(VARIABLE_OPTIONS.keys()),
+                        format_func=lambda k: VARIABLE_OPTIONS[k],
+                        horizontal=True)
 ctrl1, ctrl2, ctrl3 = st.columns(3)
 
 with ctrl1:
-    joint = st.selectbox("Joint", JOINT_OPTIONS)
+    if variable_key == 'grf':
+        side = st.radio("Side", ['Left', 'Right'], horizontal=True)
+        joint = side  # e.g. 'Left' or 'Right'
+    else:
+        joint = st.selectbox("Joint", JOINT_OPTIONS)
 with ctrl2:
-    variable_key = st.radio("Variable", list(VARIABLE_OPTIONS.keys()),
-                            format_func=lambda k: VARIABLE_OPTIONS[k],
-                            horizontal=True)
-with ctrl3:
     axis = st.radio("Axis", AXIS_OPTIONS, horizontal=True)
+
 
 y_label = VARIABLE_LABELS[variable_key]
 

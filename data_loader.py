@@ -10,7 +10,8 @@ def load_data():
     data={
         'angles':{},
         'moments':{},
-        'powers':{}
+        'powers':{},
+        'grf': {}
     }
     for data_type in data.keys():
         for file in os.listdir(assets_path):
@@ -36,7 +37,8 @@ def get_series(data, data_type, shoe, joint, axis, stat='Mean'):
     label_map = {
         'angles':  'Angles',
         'moments': 'Moment',   # singular in moments CSV
-        'powers':  'Power'     # likely singular too — check when you add powers
+        'powers':  'Power',
+        'grf': 'GRF'     # likely singular too — check when you add powers
     }
     metric_label = f'{joint} {label_map[data_type]}'
     
