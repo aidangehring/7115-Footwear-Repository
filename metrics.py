@@ -65,12 +65,12 @@ def compute_summary(data, data_type, shoe, joint_side, axis):
 
     peak, peak_idx = peak_value(series)
     trough, trough_idx = trough_value(series)
-
-    return {
+    
+    result={
         'Peak': peak,
-        'Peak at (% GC)': peak_idx,
         'Trough': trough,
-        'Trough at (% GC)': trough_idx,
         'Range': range_of_motion(series),
-        'Loading Rate': loading_rate(series)
     }
+    if data_type== 'grf':
+        result['Loading Rate'] = loading_rate(series)
+    return result
