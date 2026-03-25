@@ -208,7 +208,7 @@ fig.update_layout(
         bgcolor='#1a1a1a',
         bordercolor='#2a2a2a',
         borderwidth=1,
-        font=dict(size=12)
+        font=dict(size=12, color='#f0f0f0')
     ),
     margin=dict(l=60, r=20, t=20, b=60),
     height=420,
