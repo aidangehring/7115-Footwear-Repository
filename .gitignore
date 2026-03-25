@@ -418,4 +418,5 @@ FodyWeavers.xsd
 *.msp
 
 #New
-*.venv/
+venv/
+oryx-build-commands.txt
