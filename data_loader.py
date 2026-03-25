@@ -26,7 +26,7 @@ def load_data():
                     data[data_type][shoe_name] = df
                 except Exception as e:
                     st.write(f"Failed to load {file}: {e}")
-    return data  # ← outside both for loops, no indentation
+    return data  
 
 def get_series(data, data_type, shoe, joint, axis, stat='Mean'):
     df = data[data_type].get(shoe)
@@ -38,7 +38,7 @@ def get_series(data, data_type, shoe, joint, axis, stat='Mean'):
         'angles':  'Angles',
         'moments': 'Moment',   # singular in moments CSV
         'powers':  'Power',
-        'grf': 'GRF'     # likely singular too — check when you add powers
+        'grf': 'GRF'     
     }
     metric_label = f'{joint} {label_map[data_type]}'
     
