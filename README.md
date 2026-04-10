@@ -1,4 +1,4 @@
-# Footwear Biomechanics Comaprison App
+# Footwear Biomechanics Comparison App
 
 ## Overview
 This is a prototype app built for an MSc coursework assessment, comparing the kinematics, kinetics and ground reaction forces in 3 different shoes. Data was captured on an instrumented treadmill, processed in Qualisys track manager, post processed in visual 3D and finally means, standard deviations and full trials were exported to CSV files to input into the repository for app purposes. 
